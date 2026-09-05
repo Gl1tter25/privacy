@@ -33,5 +33,41 @@
     "readtrail": 200,
     "siplog": 200,
     "vitalvault": 200
+  },
+  "final_recheck": {
+    "checked_at": "2026-09-05T10:48:51Z",
+    "results": {
+      "(root)": 200,
+      "brewlog": 200,
+      "cleanloop": 200,
+      "coinvault": 200,
+      "expiryloop": 200,
+      "fuellog": 200,
+      "gamevault": 200,
+      "giftloop": 200,
+      "groceryloop": 200,
+      "homevault": 200,
+      "keydateloop": 200,
+      "labvault": 200,
+      "lendloop": 200,
+      "meterloop": 200,
+      "mileageloop": 200,
+      "movieloop": 200,
+      "packtrail": 200,
+      "petvault": 200,
+      "poop-loop": 200,
+      "quantvault": 200,
+      "seedvault": 200,
+      "stitchloop": 200,
+      "subvault": 200,
+      "teavault": 200,
+      "wrenchvault": 200,
+      "leaflog": 200,
+      "moodloop": 200,
+      "pacekeeper": 200,
+      "readtrail": 200,
+      "siplog": 200,
+      "vitalvault": 200
+    }
   }
 }
