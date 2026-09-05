@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <meta name="author" content="Glitter, Ezra">
+  <meta name="theme-color" content="{{THEME_COLOR}}">
+  <meta property="og:title" content="{{OG_TITLE}}">
+  <meta property="og:description" content="{{OG_DESCRIPTION}}">
+  <meta property="og:type" content="website">
+  <title>{{TITLE}}</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #3f2d20;
+      --muted: #735d4d;
+      --paper: #fffdf8;
+      --cream: #f8f0df;
+      --line: #eadcc7;
+      --accent: #f4bf45;
+      --accent-dark: #5a3b28;
+      --green: {{EYEBROW_COLOR}};
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(244, 191, 69, .22), transparent 32rem),
+        linear-gradient(180deg, #fffaf0 0%, #f7efe3 100%);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.68;
+    }
+
+    a { color: #704812; text-underline-offset: 3px; }
+    a:hover { color: #3f2d20; }
+
+    .shell {
+      width: min(960px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0 72px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(28px, 6vw, 64px);
+      border: 1px solid rgba(90, 59, 40, .12);
+      border-radius: 32px;
+      background: rgba(255, 253, 248, .92);
+      box-shadow: 0 24px 70px rgba(80, 53, 31, .11);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      right: -70px;
+      top: -90px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: .28;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--green);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 700px;
+      margin: 0;
+      font-size: clamp(2.4rem, 7vw, 4.8rem);
+      line-height: 1.02;
+      letter-spacing: -.055em;
+    }
+
+    .lede {
+      max-width: 720px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.4vw, 1.2rem);
+    }
+
+    .meta, .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .badge {
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--cream);
+      color: var(--accent-dark);
+      font-size: .84rem;
+      font-weight: 700;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 22px 0;
+    }
+
+    .summary article {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255, 253, 248, .9);
+    }
+
+    .summary strong { display: block; margin-bottom: 4px; }
+    .summary span { color: var(--muted); font-size: .91rem; }
+
+    main {
+      padding: clamp(24px, 5vw, 52px);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      background: var(--paper);
+      box-shadow: 0 18px 55px rgba(80, 53, 31, .08);
+    }
+
+    section + section {
+      margin-top: 38px;
+      padding-top: 34px;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.35rem, 3vw, 1.8rem);
+      line-height: 1.2;
+      letter-spacing: -.02em;
+    }
+
+    h3 { margin: 24px 0 8px; font-size: 1.05rem; }
+    p { margin: 10px 0; }
+    ul { margin: 10px 0; padding-left: 1.35rem; }
+    li + li { margin-top: 7px; }
+
+    .notice {
+      margin: 18px 0 0;
+      padding: 18px 20px;
+      border-left: 4px solid var(--accent);
+      border-radius: 8px 16px 16px 8px;
+      background: #fff7dc;
+    }
+
+    address { font-style: normal; }
+
+    footer {
+      padding: 26px 8px 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: .86rem;
+    }
+
+    @media (max-width: 720px) {
+      .shell { width: min(100% - 20px, 960px); padding-top: 20px; }
+      .hero, main { border-radius: 22px; }
+      .summary { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .shell { width: 100%; padding: 0; }
+      .hero, main { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="hero">
+      <p class="eyebrow">Glitter · Hong Kong</p>
+      <h1>{{H1}}</h1>
+      <p class="lede">{{LEDE}}</p>
+      <div class="meta">
+        {{BADGES}}
+      </div>
+    </header>
+
+    <div class="summary" aria-label="Privacy summary">
+      {{SUMMARY}}
+    </div>
+
+    <main>
+      <section id="scope">
+        <h2>1. Scope and who we are</h2>
+        {{SEC_SCOPE}}
+      </section>
+
+      <section id="data-you-provide">
+        <h2>2. Information you provide</h2>
+        {{SEC_DATA_YOU_PROVIDE}}
+      </section>
+
+      <section id="local-processing">
+        <h2>3. Local processing and storage</h2>
+        {{SEC_LOCAL_PROCESSING}}
+      </section>
+
+      <section id="advertising">
+        <h2>4. Advertising and automatically handled information</h2>
+        {{SEC_ADVERTISING}}
+      </section>
+
+      <section id="sharing">
+        <h2>5. Sharing and sale of information</h2>
+        {{SEC_SHARING}}
+      </section>
+
+      <section id="permissions">
+        <h2>6. Android permissions and device features</h2>
+        {{SEC_PERMISSIONS}}
+      </section>
+
+      <section id="security">
+        <h2>7. Security</h2>
+        {{SEC_SECURITY}}
+      </section>
+
+      <section id="retention">
+        <h2>8. Retention and deletion</h2>
+        {{SEC_RETENTION}}
+      </section>
+
+      <section id="children">
+        <h2>9. Age and children's privacy</h2>
+        {{SEC_CHILDREN}}
+      </section>
+
+      <section id="international">
+        <h2>10. International processing</h2>
+        {{SEC_INTERNATIONAL}}
+      </section>
+
+      <section id="rights">
+        <h2>11. Your choices and privacy rights</h2>
+        {{SEC_RIGHTS}}
+      </section>
+
+      <section id="changes">
+        <h2>12. Changes to this policy</h2>
+        {{SEC_CHANGES}}
+      </section>
+
+      <section id="contact">
+        <h2>13. Contact us</h2>
+        {{SEC_CONTACT}}
+      </section>
+    </main>
+
+    <footer>
+      <p>{{FOOTER}}</p>
+    </footer>
+  </div>
+</body>
+</html>

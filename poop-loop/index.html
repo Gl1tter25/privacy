@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for the Poop Loop Android application, published by Glitter.">
+  <meta name="author" content="Glitter, Ezra">
+  <meta name="theme-color" content="#5a3b28">
+  <meta property="og:title" content="Poop Loop Privacy Policy">
+  <meta property="og:description" content="How Poop Loop stores health records on-device and how advertising data is handled.">
+  <meta property="og:type" content="website">
+  <title>Poop Loop Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #3f2d20;
+      --muted: #735d4d;
+      --paper: #fffdf8;
+      --cream: #f8f0df;
+      --line: #eadcc7;
+      --accent: #f4bf45;
+      --accent-dark: #5a3b28;
+      --green: #35684a;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(244, 191, 69, .22), transparent 32rem),
+        linear-gradient(180deg, #fffaf0 0%, #f7efe3 100%);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.68;
+    }
+
+    a { color: #704812; text-underline-offset: 3px; }
+    a:hover { color: #3f2d20; }
+
+    .shell {
+      width: min(960px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0 72px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(28px, 6vw, 64px);
+      border: 1px solid rgba(90, 59, 40, .12);
+      border-radius: 32px;
+      background: rgba(255, 253, 248, .92);
+      box-shadow: 0 24px 70px rgba(80, 53, 31, .11);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      right: -70px;
+      top: -90px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: .28;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--green);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 700px;
+      margin: 0;
+      font-size: clamp(2.4rem, 7vw, 4.8rem);
+      line-height: 1.02;
+      letter-spacing: -.055em;
+    }
+
+    .lede {
+      max-width: 720px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.4vw, 1.2rem);
+    }
+
+    .meta, .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .badge {
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--cream);
+      color: var(--accent-dark);
+      font-size: .84rem;
+      font-weight: 700;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 22px 0;
+    }
+
+    .summary article {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255, 253, 248, .9);
+    }
+
+    .summary strong { display: block; margin-bottom: 4px; }
+    .summary span { color: var(--muted); font-size: .91rem; }
+
+    main {
+      padding: clamp(24px, 5vw, 52px);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      background: var(--paper);
+      box-shadow: 0 18px 55px rgba(80, 53, 31, .08);
+    }
+
+    section + section {
+      margin-top: 38px;
+      padding-top: 34px;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.35rem, 3vw, 1.8rem);
+      line-height: 1.2;
+      letter-spacing: -.02em;
+    }
+
+    h3 { margin: 24px 0 8px; font-size: 1.05rem; }
+    p { margin: 10px 0; }
+    ul { margin: 10px 0; padding-left: 1.35rem; }
+    li + li { margin-top: 7px; }
+
+    .notice {
+      margin: 18px 0 0;
+      padding: 18px 20px;
+      border-left: 4px solid var(--accent);
+      border-radius: 8px 16px 16px 8px;
+      background: #fff7dc;
+    }
+
+    address { font-style: normal; }
+
+    footer {
+      padding: 26px 8px 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: .86rem;
+    }
+
+    @media (max-width: 720px) {
+      .shell { width: min(100% - 20px, 960px); padding-top: 20px; }
+      .hero, main { border-radius: 22px; }
+      .summary { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .shell { width: 100%; padding: 0; }
+      .hero, main { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="hero">
+      <p class="eyebrow">Glitter · Hong Kong</p>
+      <h1>Poop Loop Privacy Policy</h1>
+      <p class="lede">Poop Loop is designed to keep user-entered bowel health records on the user's device. This policy explains that local processing and the limited information handled by Google AdMob for advertising.</p>
+      <div class="meta">
+        <span class="badge">Effective 21 July 2026</span>
+        <span class="badge">Last updated 21 July 2026</span>
+        <span class="badge">For users aged 13+</span>
+        <span class="badge">Authors: Glitter &amp; Ezra</span>
+      </div>
+    </header>
+
+    <div class="summary" aria-label="Privacy summary">
+      <article><strong>On-device first</strong><span>Health records are stored locally and are not sent to Glitter or to advertising services.</span></article>
+      <article><strong>No account required</strong><span>Poop Loop has no account system, cloud sync, or separate analytics SDK.</span></article>
+      <article><strong>Your choices</strong><span>You can delete records, clear all app data, manage ad privacy choices, or uninstall at any time.</span></article>
+    </div>
+
+    <main>
+      <section id="scope">
+        <h2>1. Scope and who we are</h2>
+        <p>This Privacy Policy applies to the Poop Loop Android application (the “App”), published by <strong>Glitter</strong>, based in Hong Kong (“Glitter,” “we,” “us,” or “our”). It explains how information is accessed, used, stored, disclosed, retained, and deleted when you use the App. The App's package name is com.gl1tt.poop.</p>
+        <p>Poop Loop is a personal record-keeping and trend-viewing tool. It is not a medical device and does not diagnose, treat, cure, or prevent any medical condition. Consult a qualified healthcare professional for medical advice, diagnosis, or treatment.</p>
+      </section>
+
+      <section id="data-you-provide">
+        <h2>2. Information you provide</h2>
+        <p>You may choose to enter information such as:</p>
+        <ul>
+          <li>bowel-movement dates, times, durations, stool characteristics, and related observations;</li>
+          <li>body sensations, ease or discomfort information, notes, and daily events;</li>
+          <li>reminder, display, language, privacy, export, and app-lock settings; and</li>
+          <li>information contained in backups or exports that you create.</li>
+        </ul>
+        <p>This information may be health-related or otherwise sensitive. It is used on your device to provide recording, history, statistics, reminders, exports, and backups. Glitter does not operate a server that receives these user-entered health records.</p>
+      </section>
+
+      <section id="local-processing">
+        <h2>3. Local processing and storage</h2>
+        <p>Poop Loop stores user-entered records and settings in the App's private storage on your Android device. Health records are encrypted locally using a key protected by Android Keystore. New backup files are encrypted using the password you choose.</p>
+        <p>The App does not require your name, phone number, email address, location, or an account. It does not include cloud synchronization or a separate analytics SDK.</p>
+        <div class="notice"><strong>Important:</strong> Health records, notes, and insights are not sent to Google AdMob. Advertising requests are separate from the local health-record database.</div>
+      </section>
+
+      <section id="advertising">
+        <h2>4. Advertising and automatically handled information</h2>
+        <p>The App uses Google AdMob and Google's User Messaging Platform to provide low-frequency ads and, where required, advertising privacy choices. Depending on your region, consent choices, device settings, and Google's configuration, Google and its advertising partners may automatically collect or share:</p>
+        <ul>
+          <li>your IP address, which may be used to estimate general location;</li>
+          <li>device or account identifiers, including the Android advertising ID and app set ID;</li>
+          <li>app and ad interactions, such as app launches, taps, ad impressions, and video views; and</li>
+          <li>diagnostic information, such as app or SDK performance, launch time, hangs, and energy usage.</li>
+        </ul>
+        <p>Google describes these uses as supporting advertising, measurement or analytics, fraud prevention, security, and compliance. Information transmitted by the Google Mobile Ads SDK is encrypted in transit using TLS.</p>
+        <p>Where required, the App presents a consent form before requesting ads. Where available, you can revisit your choices through <strong>Settings → Ad privacy choices</strong>. You can also reset or delete your advertising ID in Android settings. Completing an optional rewarded ad stores a local 24-hour ad-free status on your device.</p>
+        <p>For more information, review Google's <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Privacy Policy</a>, <a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer">Advertising Technologies</a>, and <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" rel="noopener noreferrer">Google Play data disclosure for the Mobile Ads SDK</a>.</p>
+      </section>
+
+      <section id="sharing">
+        <h2>5. Sharing and sale of information</h2>
+        <p>Glitter does not sell your user-entered health records, notes, or statistics. We do not share those records with advertising services.</p>
+        <p>Health information leaves the App only when you deliberately export, share, or save a backup and select another app, service, folder, or storage provider as the destination. That destination's privacy terms then apply. Google may process advertising-related information as described in Section 4 and under Google's own policies.</p>
+      </section>
+
+      <section id="permissions">
+        <h2>6. Android permissions and device features</h2>
+        <ul>
+          <li><strong>Internet and network state:</strong> used to request ads and privacy messages.</li>
+          <li><strong>Notifications:</strong> used only for timer and reminder notifications you enable.</li>
+          <li><strong>Alarms and reminders:</strong> used to schedule reminders at the times you select. On supported Android versions, you control this special access in system settings.</li>
+          <li><strong>Boot completed:</strong> used to restore enabled reminders after the device restarts.</li>
+          <li><strong>Biometric authentication:</strong> used to protect App access or sensitive actions when you enable App lock or verification. Authentication is performed by Android; the App does not receive or store your fingerprint, face, or biometric template.</li>
+        </ul>
+        <p>Declining notification, alarm, or biometric access disables the related optional feature but does not prevent basic record keeping.</p>
+      </section>
+
+      <section id="security">
+        <h2>7. Security</h2>
+        <p>We use reasonable technical safeguards appropriate to the App's local-first design, including Android private app storage, local record encryption with an Android Keystore-protected key, password-based encryption for new backups, disabled Android system backup for App-private data, and encrypted network transport used by Google advertising services.</p>
+        <p>No method of storage or transmission is completely secure. You are responsible for protecting access to your device, your backup passwords, and any exported files or backups after they leave the App.</p>
+      </section>
+
+      <section id="retention">
+        <h2>8. Retention and deletion</h2>
+        <ul>
+          <li>Active records remain on your device until you delete them.</li>
+          <li>Deleted records remain in the App's Trash for up to 30 days unless you permanently delete them sooner.</li>
+          <li>The App's “Clear all data” control permanently removes records and daily events from the App.</li>
+          <li>Uninstalling the App removes its private local storage under normal Android behavior.</li>
+          <li>Exports and backup files you created must be deleted separately from the folder, app, or storage provider where you saved them.</li>
+        </ul>
+        <p>Glitter does not hold a server-side copy of your health records and therefore cannot retrieve or delete those local records for you. Retention of advertising-related information handled by Google is governed by Google's policies and controls.</p>
+      </section>
+
+      <section id="children">
+        <h2>9. Age and children's privacy</h2>
+        <p>Poop Loop is intended for users aged 13 and older and is not directed to children under 13. We do not knowingly collect user-entered personal or health information from children on our servers because the App has no developer-operated collection server.</p>
+        <p>If the law where you live requires a higher age to consent to data processing, use the App only with the permission and supervision required by your parent or legal guardian. If you believe advertising-related information has been handled in connection with a child contrary to applicable law, contact us and use Google's privacy controls.</p>
+      </section>
+
+      <section id="international">
+        <h2>10. International processing</h2>
+        <p>Glitter is based in Hong Kong. User-entered health records remain on your device unless you choose to export or share them. Google and its advertising partners may process advertising-related information in countries other than your own, subject to their privacy policies and applicable transfer safeguards.</p>
+      </section>
+
+      <section id="rights">
+        <h2>11. Your choices and privacy rights</h2>
+        <p>Depending on where you live, you may have rights concerning personal information, including rights to access, correct, delete, restrict, object to, or withdraw consent for certain processing.</p>
+        <ul>
+          <li>Use the App's edit, Trash, permanent-delete, and Clear all data controls for local records.</li>
+          <li>Use Ad privacy choices in the App where displayed, or Android's advertising privacy controls.</li>
+          <li>Contact Google regarding information controlled by Google.</li>
+          <li>Contact Glitter using the email address below for questions or requests concerning this policy.</li>
+        </ul>
+        <p>Because Glitter does not receive your local health records, we may be unable to identify or provide records that exist only on your device.</p>
+      </section>
+
+      <section id="changes">
+        <h2>12. Changes to this policy</h2>
+        <p>We may update this Privacy Policy when the App, legal requirements, or third-party services change. The “Last updated” date above identifies the current version. Material changes will be reflected on this page and, where appropriate, communicated in the App or its store listing.</p>
+      </section>
+
+      <section id="contact">
+        <h2>13. Contact us</h2>
+        <address>
+          <strong>Glitter</strong><br>
+          Hong Kong<br>
+          Email: <a href="mailto:williamfan12138@gmail.com">williamfan12138@gmail.com</a><br><br>
+          <strong>Ezra</strong><br>
+          Email: <a href="mailto:zjh020608@gmail.com">zjh020608@gmail.com</a>
+        </address>
+        <p>Please include “Poop Loop Privacy” in the subject line so we can identify your request.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Glitter · Poop Loop</p>
+    </footer>
+  </div>
+</body>
+</html>

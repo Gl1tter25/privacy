@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unified privacy policies for all Android applications published by Glitter.">
+  <meta name="author" content="Glitter, Ezra">
+  <meta name="theme-color" content="#5a3b28">
+  <meta property="og:title" content="Glitter App Privacy Policies">
+  <meta property="og:description" content="One hub for the privacy policies of every Android app published by Glitter.">
+  <meta property="og:type" content="website">
+  <title>Glitter App Privacy Policies</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #3f2d20;
+      --muted: #735d4d;
+      --paper: #fffdf8;
+      --cream: #f8f0df;
+      --line: #eadcc7;
+      --accent: #f4bf45;
+      --accent-dark: #5a3b28;
+      --green: {{EYEBROW_COLOR}};
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(244, 191, 69, .22), transparent 32rem),
+        linear-gradient(180deg, #fffaf0 0%, #f7efe3 100%);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.68;
+    }
+
+    a { color: #704812; text-underline-offset: 3px; }
+    a:hover { color: #3f2d20; }
+
+    .shell {
+      width: min(960px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0 72px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(28px, 6vw, 64px);
+      border: 1px solid rgba(90, 59, 40, .12);
+      border-radius: 32px;
+      background: rgba(255, 253, 248, .92);
+      box-shadow: 0 24px 70px rgba(80, 53, 31, .11);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      right: -70px;
+      top: -90px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: .28;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--green);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 700px;
+      margin: 0;
+      font-size: clamp(2.4rem, 7vw, 4.8rem);
+      line-height: 1.02;
+      letter-spacing: -.055em;
+    }
+
+    .lede {
+      max-width: 720px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.4vw, 1.2rem);
+    }
+
+    .meta, .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .badge {
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--cream);
+      color: var(--accent-dark);
+      font-size: .84rem;
+      font-weight: 700;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 22px 0;
+    }
+
+    .summary article {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255, 253, 248, .9);
+    }
+
+    .summary strong { display: block; margin-bottom: 4px; }
+    .summary span { color: var(--muted); font-size: .91rem; }
+
+    main {
+      padding: clamp(24px, 5vw, 52px);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      background: var(--paper);
+      box-shadow: 0 18px 55px rgba(80, 53, 31, .08);
+    }
+
+    section + section {
+      margin-top: 38px;
+      padding-top: 34px;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.35rem, 3vw, 1.8rem);
+      line-height: 1.2;
+      letter-spacing: -.02em;
+    }
+
+    h3 { margin: 24px 0 8px; font-size: 1.05rem; }
+    p { margin: 10px 0; }
+    ul { margin: 10px 0; padding-left: 1.35rem; }
+    li + li { margin-top: 7px; }
+
+    .notice {
+      margin: 18px 0 0;
+      padding: 18px 20px;
+      border-left: 4px solid var(--accent);
+      border-radius: 8px 16px 16px 8px;
+      background: #fff7dc;
+    }
+
+    address { font-style: normal; }
+
+    footer {
+      padding: 26px 8px 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: .86rem;
+    }
+
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 22px 0;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255, 253, 248, .9);
+    }
+
+    .card h2 { margin: 0; font-size: 1.15rem; letter-spacing: -.01em; }
+    .card .pkg { color: var(--accent-dark); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .8rem; }
+    .card p { margin: 0; color: var(--muted); font-size: .91rem; }
+    .card a { margin-top: auto; padding-top: 8px; font-weight: 700; text-decoration: none; }
+    .card a:hover { text-decoration: underline; }
+
+    @media (max-width: 720px) {
+      .shell { width: min(100% - 20px, 960px); padding-top: 20px; }
+      .hero, main { border-radius: 22px; }
+      .summary, .cards { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .shell { width: 100%; padding: 0; }
+      .hero, main { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="hero">
+      <p class="eyebrow">Glitter · Hong Kong</p>
+      <h1>App Privacy Policies</h1>
+      <p class="lede">Every Android app published by Glitter keeps the records you enter on your own device. This hub links to the full privacy policy of each app — same promises, same layout, one address per app.</p>
+      <div class="meta">
+        <span class="badge">30 apps</span>
+        <span class="badge">On-device first</span>
+        <span class="badge">No account required</span>
+        <span class="badge">Authors: Glitter &amp; Ezra</span>
+      </div>
+    </header>
+
+    <div class="summary" aria-label="How these policies work">
+      <article><strong>One layout</strong><span>All policies follow the same 13-section structure, so every answer is in the same place for every app.</span></article>
+      <article><strong>On-device first</strong><span>User-entered records stay in the app's private storage; Glitter runs no collection server for them.</span></article>
+      <article><strong>Same contacts</strong><span>Every policy ends with the same Glitter (Hong Kong) and Ezra contact cards.</span></article>
+    </div>
+
+    <main>
+      <section id="apps">
+        <h2>All apps</h2>
+        <p>Pick an app to read its full privacy policy. Each policy also lives at <strong>gl1tter25.github.io/privacy/&lt;app&gt;/</strong> — the address used in the app's Google Play listing.</p>
+      </section>
+    </main>
+
+    <div class="cards" aria-label="App privacy policies">
+      <article class="card">
+        <h2>Poop Loop</h2>
+        <span class="pkg">com.gl1tt.poop</span>
+        <p>How Poop Loop stores health records on-device and how advertising data is handled.</p>
+        <a href="./poop-loop/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>BrewLog</h2>
+        <span class="pkg">com.glitterfan.brewlog</span>
+        <p>How BrewLog keeps your pour-over notes on-device and how advertising data is handled.</p>
+        <a href="./brewlog/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>CleanLoop</h2>
+        <span class="pkg">com.glitterfan.cleanloop</span>
+        <p>How CleanLoop stores your chore rotation records on-device and how advertising data is handled.</p>
+        <a href="./cleanloop/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>CoinVault</h2>
+        <span class="pkg">com.glitterfan.coinvault</span>
+        <p>How CoinVault stores your collectible catalogue on-device and how advertising data is handled.</p>
+        <a href="./coinvault/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>ExpiryLoop</h2>
+        <span class="pkg">com.glitterfan.expiryloop</span>
+        <p>How ExpiryLoop keeps your expiry dates on-device and how advertising data is handled.</p>
+        <a href="./expiryloop/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>FuelLog</h2>
+        <span class="pkg">com.glitterfan.fuellog</span>
+        <p>How FuelLog stores your fuel records on-device and how advertising data is handled.</p>
+        <a href="./fuellog/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>GameVault</h2>
+        <span class="pkg">com.glitterfan.gamevault</span>
+        <p>How GameVault stores your game library on-device and how advertising data is handled.</p>
+        <a href="./gamevault/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>GiftLoop</h2>
+        <span class="pkg">com.glitterfan.giftloop</span>
+        <p>How GiftLoop keeps your gift ideas on-device and how advertising data is handled. GiftLoop is not a store and does not process payments.</p>
+        <a href="./giftloop/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>GroceryLoop</h2>
+        <span class="pkg">com.glitterfan.groceryloop</span>
+        <p>How GroceryLoop keeps your shopping list on-device and how advertising data is handled.</p>
+        <a href="./groceryloop/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>HomeVault</h2>
+        <span class="pkg">com.glitterfan.homevault</span>
+        <p>How HomeVault stores your appliance warranty records on-device and how advertising data is handled.</p>
+        <a href="./homevault/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>KeyDateLoop</h2>
+        <span class="pkg">com.glitterfan.keydateloop</span>
+        <p>How KeyDateLoop keeps your recorded dates on-device and how advertising data is handled.</p>
+        <a href="./keydateloop/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>LabVault</h2>
+        <span class="pkg">com.glitterfan.labvault</span>
+        <p>How LabVault stores lab-result records on-device and how advertising data is handled.</p>
+        <a href="./labvault/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>LeafLog</h2>
+        <span class="pkg">com.glitterfan.leaflog</span>
+        <p>How LeafLog stores your plant records on-device and how advertising data is handled.</p>
+        <a href="./leaflog/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>LendLoop</h2>
+        <span class="pkg">com.glitterfan.lendloop</span>
+        <p>How LendLoop stores your lend/borrow records on-device and how advertising data is handled.</p>
+        <a href="./lendloop/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>MeterLoop</h2>
+        <span class="pkg">com.glitterfan.meterloop</span>
+        <p>How MeterLoop stores your meter readings on-device and how advertising data is handled.</p>
+        <a href="./meterloop/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>MileageLoop</h2>
+        <span class="pkg">com.glitterfan.mileageloop</span>
+        <p>How MileageLoop stores your trip records on-device and how advertising data is handled.</p>
+        <a href="./mileageloop/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>MoodLoop</h2>
+        <span class="pkg">com.glitterfan.moodloop</span>
+        <p>How MoodLoop stores mood entries on-device and how advertising data is handled.</p>
+        <a href="./moodloop/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>MovieLoop</h2>
+        <span class="pkg">com.glitterfan.movieloop</span>
+        <p>How MovieLoop stores your movie viewing notes on-device and how advertising data is handled.</p>
+        <a href="./movieloop/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>PaceKeeper</h2>
+        <span class="pkg">com.glitterfan.pacekeeper</span>
+        <p>How PaceKeeper stores focus sessions on-device and how advertising data is handled.</p>
+        <a href="./pacekeeper/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>PackTrail</h2>
+        <span class="pkg">com.glitterfan.packtrail</span>
+        <p>How PackTrail stores your packing lists on-device and how advertising data is handled.</p>
+        <a href="./packtrail/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>PetVault</h2>
+        <span class="pkg">com.glitterfan.petvault</span>
+        <p>How PetVault keeps your pets&#x27; care records on-device and how advertising data is handled.</p>
+        <a href="./petvault/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>QuantVault</h2>
+        <span class="pkg">com.glitterfan.quantvault</span>
+        <p>How QuantVault keeps your life-logging data on-device, runs AI insights locally, and how advertising data is handled.</p>
+        <a href="./quantvault/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>ReadTrail</h2>
+        <span class="pkg">com.glitterfan.readtrail</span>
+        <p>How ReadTrail stores books and reading progress on-device and how advertising data is handled.</p>
+        <a href="./readtrail/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>SeedVault</h2>
+        <span class="pkg">com.glitterfan.seedvault</span>
+        <p>How SeedVault keeps your seed inventory on-device and how advertising data is handled.</p>
+        <a href="./seedvault/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>SipLog</h2>
+        <span class="pkg">com.glitterfan.siplog</span>
+        <p>How SipLog stores drink logs on-device and how advertising data is handled.</p>
+        <a href="./siplog/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>StitchLoop</h2>
+        <span class="pkg">com.glitterfan.stitchloop</span>
+        <p>How StitchLoop stores your craft projects on-device and how advertising data is handled.</p>
+        <a href="./stitchloop/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>SubVault</h2>
+        <span class="pkg">com.glitterfan.subvault</span>
+        <p>How SubVault keeps your subscription records on-device and how advertising data is handled.</p>
+        <a href="./subvault/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>TeaVault</h2>
+        <span class="pkg">com.glitterfan.teavault</span>
+        <p>How TeaVault stores your tea inventory on-device and how advertising data is handled.</p>
+        <a href="./teavault/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>VitalVault</h2>
+        <span class="pkg">com.glitterfan.vitalvault</span>
+        <p>How VitalVault keeps glucose and blood-pressure readings on-device and encrypted, runs AI insights locally, and how the single banner ad is handled.</p>
+        <a href="./vitalvault/">Privacy policy &rarr;</a>
+      </article>
+      <article class="card">
+        <h2>WrenchVault</h2>
+        <span class="pkg">com.glitterfan.wrenchvault</span>
+        <p>How WrenchVault stores your vehicle maintenance records on-device and how advertising data is handled.</p>
+        <a href="./wrenchvault/">Privacy policy &rarr;</a>
+      </article>
+    </div>
+
+    <footer>
+      <p>© 2026 Glitter · App Privacy Policies</p>
+    </footer>
+  </div>
+</body>
+</html>
